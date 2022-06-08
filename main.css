@@ -32,5 +32,17 @@ button{
 
 div{
     width: 177px;
-    margin: 150px auto;
+    margin: 100px auto 0;
+}
+
+a{
+    margin: 50px auto;
+    background-color: var(--mainColor);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    width: 70px;
+    display: none;
+    text-decoration: none;
+    
 }

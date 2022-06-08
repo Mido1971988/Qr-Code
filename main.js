@@ -16,8 +16,18 @@ form.addEventListener("submit",function(ev){
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
     });
+    setTimeout(function(){
+        let img = document.querySelector("img").getAttribute("src")
+        let a = document.getElementById("download");
+        a.style.display ="block";
+        a.href = img; 
+        a.download = "Image.png"; 
+    },0)
     document.getElementById("url").value = ""
     document.getElementById("color").value = ""
 })
+
+
+
 
 
