@@ -22,7 +22,7 @@ form.addEventListener("submit",function(ev){
         a.style.display ="block";
         a.href = img; 
         a.download = "Image.png"; 
-    },0)
+    },1000)
     document.getElementById("url").value = ""
     document.getElementById("color").value = ""
 })
