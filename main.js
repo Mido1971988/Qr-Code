@@ -7,6 +7,8 @@ form.addEventListener("submit",function(ev){
     ev.preventDefault()
     output.textContent = ""
     let url = document.getElementById("url").value
+    let reg = /\b(?!www)\w+(?=\..)/ig
+    let fileName = url.match(reg)[0]
     let color = document.getElementById("color").value
     let qrcode = new QRCode("output", {
         text: url,
@@ -21,13 +23,8 @@ form.addEventListener("submit",function(ev){
         let a = document.getElementById("download");
         a.style.display ="block";
         a.href = img; 
-        a.download = "Image.png"; 
+        a.download = `${fileName}.png`; 
     },100)
     document.getElementById("url").value = ""
     document.getElementById("color").value = ""
 })
-
-
-
-
-
