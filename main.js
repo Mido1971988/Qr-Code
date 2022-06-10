@@ -7,7 +7,7 @@ form.addEventListener("submit",function(ev){
     ev.preventDefault()
     output.textContent = ""
     let url = document.getElementById("url").value
-    let reg = /\b(?!www)\w+(?=\..)/ig
+    let reg = /\b(?!www\.)\w+(?=\..)/ig
     let fileName = url.match(reg)[0]
     let color = document.getElementById("color").value
     let qrcode = new QRCode("output", {
